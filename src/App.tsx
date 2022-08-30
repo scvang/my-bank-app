@@ -11,6 +11,7 @@ export default class App extends React.Component{
         isLoggedin: boolean; 
         username: String; 
         password: String;
+        render: boolean;
     }
 
     constructor(props){
@@ -20,7 +21,8 @@ export default class App extends React.Component{
             changePage: false,
             isLoggedin: false,
             username: '',
-            password: ''
+            password: '',
+            render: false
         }
     }
 
@@ -62,7 +64,7 @@ export default class App extends React.Component{
                             <Row className="justify-content-md-center">
                                 <Col className="col-add-btn-send">
                                     <Button className="add-btn-round add-btn-send" variant="secondary" size="sm" type="submit" onClick={this.setLoggedin}>
-                                        Sign in
+                                        Sign-in
                                     </Button>
                                 </Col>
                             </Row>

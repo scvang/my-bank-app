@@ -7,13 +7,15 @@ import bankCard from '../assets/images/bank_card.png';
 export default class Home extends React.Component{
 
     state: {
-        balance: Number;
+        balance: String;
+        credit: String;
     }
 
     constructor(props){
         super(props);
         this.state = {
-            balance: 9999.99
+            balance: 2023.00.toFixed(2),
+            credit: 100.55.toFixed(2)
         }
     }
 
@@ -21,20 +23,36 @@ export default class Home extends React.Component{
         return(
             <div className = 'home-d-flex'>
                 <div className = 'home-center'>
-                    <div style={{width:'100%'}}>
-                        <>
-                            <h2>Your account summary:</h2>
-
-                            <br></br>
-                            Credit Card: {'(ending in ..XXXX)'}
-                            <br></br>
-                            Balance: ${this.state.balance}
-                            <br></br>
-                            Available Credit: ${'100.50'}
-                            <br></br>
-                        </>
-                    </div>
+                        <body style = {{color:'white'}}>
+                            <>
+                                <h2>Account summary:</h2>
+                                <br></br>
+                                <img src={bankCard} className='img-center'/>
+                                <p>Credit Card: {'(ending in ..9999)'}</p>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <p>Current Balance: $<>{this.state.balance}</></p>
+                                <p>Credit Available: $<>{this.state.credit}</></p>
+                            </>
+                         </body>
                 </div>
+                <table className='buttons' align='right'>
+                    <tr>
+                        <button type="button">Overview</button>
+                        <br></br>
+                        <button type="button">Transaction History</button>
+                        <br></br>
+                        <button type="button">Send Money</button>
+                        <br></br>
+                        <button type="button">Statements</button>
+                        <br></br>
+                        <button type="button">Payment</button>
+                        <br></br>
+                        <button type="button">Support</button>
+                    </tr>
+                </table>
             </div>
         );
     }

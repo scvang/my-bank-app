@@ -1,10 +1,15 @@
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .app-d-flex {
     display: flex!important;
-    height: 80vh;
+    height: 120vh;
   }
   
 .app-center {
     margin: 0 auto;
     align-self: center;
-    width: 25vw;
+    width: 35vw;
   }
