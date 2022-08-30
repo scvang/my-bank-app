@@ -17,12 +17,12 @@ export default class Home extends React.Component{
         balance: String;
         credit: String;
         historyScreen: boolean;
-        homeScreen:boolean;
-        paymentScreen:boolean;
-        sendMoneyScreen:boolean;
-        statementScreen:boolean;
-        supportScreen:boolean;
-        appScreen:boolean;
+        homeScreen: boolean;
+        paymentScreen: boolean;
+        sendMoneyScreen: boolean;
+        statementScreen: boolean;
+        supportScreen: boolean;
+        appScreen: boolean;
     }
 
     constructor(props){
@@ -41,21 +41,26 @@ export default class Home extends React.Component{
     }
 
     changePage = (event,theScreen) =>{
-        switch(theScreen){
-            case 'history':
-                this.setState({historyScreen:true});
-            case 'home':
-                this.setState({homeScreen:true});
-            case 'payment':
-                this.setState({paymentScreen:true});
-            case 'send':
-                this.setState({sendScreen:true});
-            case 'statements':
-                this.setState({statementScreen:true});
-            case 'support':
-                this.setState({supportScreen:true});
-            case 'logout':
-                this.setState({appScreen:true});
+        if(theScreen == 'history'){
+            this.setState({historyScreen:true});
+        }
+        if(theScreen == 'payment'){
+            this.setState({paymentScreen:true});
+        }
+        if(theScreen == 'home'){
+            this.setState({homeScreen:true});
+        }
+        if(theScreen == 'send'){
+            this.setState({sendMoneyScreen:true});
+        }
+        if(theScreen == 'statements'){
+            this.setState({statementScreen:true});
+        }
+        if(theScreen == 'support'){
+            this.setState({supportScreen:true});
+        }
+        if(theScreen == 'logout'){
+            this.setState({appScreen:true});
         }
     }
 
@@ -85,36 +90,34 @@ export default class Home extends React.Component{
         return(
             <div className = 'home-d-flex'>
                 <div className = 'home-center'>
-                        <body style = {{color:'white'}}>
-                            <>
-                                <h2>Account Summary:</h2>
-                                <br></br>
-                                <img src={bankCard} className='img-center'/>
-                                <p>Credit Card: {'(ending in ..9999)'}</p>
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <p>Current Balance: $<>{this.state.balance}</></p>
-                                <p>Credit Available: $<>{this.state.credit}</></p>
-                            </>
-                         </body>
+                        <p style = {{color:'white'}}>
+                            <h2>Account Summary:</h2>
+                            <br></br>
+                            <img src={bankCard} className='img-center'/>
+                            <p>Credit Card: {'(ending in ..9999)'}</p>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <p>Current Balance: $<>{this.state.balance}</></p>
+                            <p>Credit Available: $<>{this.state.credit}</></p>
+                         </p>
                 </div>
                 <table className='buttons' align='right'>
                     <tr>
                         <Button className ='button' size='lg' onClick={event => this.changePage(event,'home')}>Overview</Button>
                         <br></br>
-                        <button type="button" onClick={event => this.changePage(event,'history')}>Transaction History</button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'history')}>Transaction History</Button>
                         <br></br>
-                        <button type="button" onClick={event => this.changePage(event,'send')}>Send Money</button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'send')}>Send Money</Button>
                         <br></br>
-                        <button type="button" onClick={event => this.changePage(event,'statements')}>Statements</button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'statements')}>Statements</Button>
                         <br></br>
-                        <button type="button" onClick={event => this.changePage(event,'payment')}>Payment</button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'payment')}>Payment</Button>
                         <br></br>
-                        <button type="button" onClick={event => this.changePage(event,'support')}>Support</button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'support')}>Support</Button>
                         <br></br>
-                        <button type="button" onClick={event => this.changePage(event,'logout')}>Logout</button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'logout')}>Logout</Button>
                     </tr>
                 </table>
             </div>
