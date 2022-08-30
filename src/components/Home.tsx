@@ -88,10 +88,14 @@ export default class Home extends React.Component{
         }
         else
         return(
+        <div className = 'home'>
             <div className = 'home-d-flex'>
                 <div className = 'home-center'>
                         <p style = {{color:'white'}}>
                             <h2>Account Summary:</h2>
+                            <br></br>
+                            <br></br>
+                            <br></br>
                             <br></br>
                             <img src={bankCard} className='img-center'/>
                             <p>Credit Card: {'(ending in ..9999)'}</p>
@@ -121,6 +125,7 @@ export default class Home extends React.Component{
                     </tr>
                 </table>
             </div>
+        </div>
         );
     }
 }

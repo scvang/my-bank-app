@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import Home from '../src/components/Home';
+import './css/App';
 
 export default class App extends React.Component{
 
@@ -37,39 +38,41 @@ export default class App extends React.Component{
     render(){
         if(!this.state.isLoggedin){
             return(
-                <div className='app-d-flex'>
-                    <div className='app-center'>
+                <div className = 'app-body'>
+                    <div className = 'app-d-flex'>
+                        <div className = 'app-center'>
 
-                        {/* The user enters their email address */}
-                        <div style={{width:'100%'}}>
-                            <span title='Enter your E-mail address'>
-                                <Form.Group controlId='login'>
-                                    <Form.Control className='' required onChange={this.setUsername} placeholder='E-mail'/>
-                                </Form.Group>
-                            </span>
+                            {/* The user enters their email address */}
+                            <div style={{width:'100%'}}>
+                                <span title='Enter your E-mail address'>
+                                    <Form.Group controlId='login'>
+                                        <Form.Control className='' required onChange={this.setUsername} placeholder='E-mail'/>
+                                    </Form.Group>
+                                </span>
+                            </div>
+
+                            {/* The user enters a password field */}
+                            <div style={{width:'100%'}}>
+                                <span title='Enter your password'>
+                                    <Form.Group controlId='password'>
+                                        <Form.Control type='password' className='' required onChange={this.setUsername} placeholder='Password'/>
+                                    </Form.Group>
+                                </span>
+                            </div>
+
+                            {/* Login button */}
+                            <br></br>
+                            <div className='app-center' style={{width: '40%'}}>
+                                <Row className="justify-content-md-center">
+                                    <Col className="col-add-btn-send">
+                                        <Button className="add-btn-round add-btn-send" variant="secondary" size="sm" type="submit" onClick={this.setLoggedin}>
+                                            Sign-in
+                                        </Button>
+                                    </Col>
+                                </Row>
+                            </div>
+
                         </div>
-
-                        {/* The user enters a password field */}
-                        <div style={{width:'100%'}}>
-                            <span title='Enter your password'>
-                                <Form.Group controlId='password'>
-                                    <Form.Control type='password' className='' required onChange={this.setUsername} placeholder='Password'/>
-                                </Form.Group>
-                            </span>
-                        </div>
-
-                        {/* Login button */}
-                        <br></br>
-                        <div className='app-center' style={{width: '40%'}}>
-                            <Row className="justify-content-md-center">
-                                <Col className="col-add-btn-send">
-                                    <Button className="add-btn-round add-btn-send" variant="secondary" size="sm" type="submit" onClick={this.setLoggedin}>
-                                        Sign-in
-                                    </Button>
-                                </Col>
-                            </Row>
-                        </div>
-
                     </div>
                 </div>
             );

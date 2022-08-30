@@ -1,29 +1,31 @@
-body {
+.home {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
     overflow-x: hidden;
+    overflow-y: hidden;
     text-indent: 15%;
     line-height: 0.5;
 }
 
 .button {
-  font-family: Arial;
-  height:50%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1em;
-  background-color: white;
-  border-color: grey;
+  background-color: rgb(32, 32, 124);
+  border-color: rgb(36, 36, 138);
   font-weight: bold;
+  color: white;
 }
 
 .buttons { 
-  width: 40%;
+  width: 50%;
   height: 100%;
   table-layout: fixed;
   border-collapse: collapse;
+  margin-right: -25px;
 }
 .buttons button { 
   width: 50%;
-  height: 17.25%;
+  height: 14.25%;
 }
 
 .img-center{
@@ -35,7 +37,7 @@ body {
 
 .home-d-flex {
     display: flex!important;
-    height: 80vh;
+    height: 97vh;
     width: 1000px;
   }
 
