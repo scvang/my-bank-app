@@ -25,7 +25,7 @@ export default class Home extends React.Component{
                 <div className = 'home-center'>
                         <body style = {{color:'white'}}>
                             <>
-                                <h2>Account summary:</h2>
+                                <h2>Account Summary:</h2>
                                 <br></br>
                                 <img src={bankCard} className='img-center'/>
                                 <p>Credit Card: {'(ending in ..9999)'}</p>
@@ -40,7 +40,7 @@ export default class Home extends React.Component{
                 </div>
                 <table className='buttons' align='right'>
                     <tr>
-                        <button type="button">Overview</button>
+                        <Button className ='button' size='lg'>Overview</Button>
                         <br></br>
                         <button type="button">Transaction History</button>
                         <br></br>
