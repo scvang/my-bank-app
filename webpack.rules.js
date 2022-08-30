@@ -33,7 +33,14 @@ module.exports = [
       options: {
         exclude: /node_modules/,
         presets: ['@babel/preset-react']
-      }
+      },
+    },
+  },
+  {
+    test: /\.(png|jpe?g|gif|jp2|webp)$/,
+    loader: 'file-loader',
+    options: {
+      name: '[path][name].[ext]',
     }
-  }
+  },
 ];

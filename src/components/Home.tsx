@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import '../../src/css/Home';
-import bankCard from 'C:/Users/Sebastian/Documents/My Projects/my-bank-app/src/resources/images/bank_card.png';
+import '../css/Home';
+import bankCard from '../assets/images/bank_card.png';
 
 export default class Home extends React.Component{
 
@@ -24,7 +24,8 @@ export default class Home extends React.Component{
                     <div style={{width:'100%'}}>
                         <>
                             <h2>Your account summary:</h2>
-                            <img src={''}></img>
+
+                            <br></br>
                             Credit Card: {'(ending in ..XXXX)'}
                             <br></br>
                             Balance: ${this.state.balance}
