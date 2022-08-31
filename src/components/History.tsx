@@ -84,7 +84,7 @@ export default class History extends React.Component{
             <div className = 'history-body'>
                 <div className = 'home-d-flex'>
                     <div className = 'home-center'>
-                            <p style = {{color:'white'}} className='table-d'>
+                            <p className='table-d'>
                                 <h2 style={{marginLeft:40,marginTop:-200}}>Transaction History:</h2>
                                 <table>
                                     <br></br>

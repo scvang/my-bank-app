@@ -16,12 +16,14 @@ html {
   padding: 0 20px;
   align-self:center;
   font-weight:bold;
+  color: white;
 }
 
 .table-spacing{
   padding: 0 20px;
   align-self:center;
   font-weight:0;
+  color: white;
 }
 
 .history-body {

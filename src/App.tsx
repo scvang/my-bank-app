@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import Home from '../src/components/Home';
 import './css/App';
+import bankLogo from './assets/images/bank-logo.png';
+import bankIcon from './assets/images/bank-icon.png';
 
 export default class App extends React.Component{
 
@@ -41,7 +43,10 @@ export default class App extends React.Component{
                 <div className = 'app-body'>
                     <div className = 'app-d-flex'>
                         <div className = 'app-center'>
-
+                            <img src={bankIcon} className='app-bank-icon'/>
+                            <br></br><br></br>
+                            <img src={bankLogo} className='app-bank-logo'/>
+                            <br></br><br></br><br></br><br></br><br></br>
                             {/* The user enters their email address */}
                             <div style={{width:'100%'}}>
                                 <span title='Enter your E-mail address'>
@@ -65,7 +70,7 @@ export default class App extends React.Component{
                             <div className='app-center' style={{width: '40%'}}>
                                 <Row className="justify-content-md-center">
                                     <Col className="col-add-btn-send">
-                                        <Button className="add-btn-round add-btn-send" variant="secondary" size="sm" type="submit" onClick={this.setLoggedin}>
+                                        <Button type="submit" onClick={this.setLoggedin}>
                                             Sign-in
                                         </Button>
                                     </Col>

@@ -15,7 +15,19 @@ html{
   
 .app-center {
     margin: 0 auto;
-    margin-bottom: -150px;
+    margin-bottom: -20px;
     align-self: center;
     width: 25vw;
+}
+
+.app-bank-logo{
+    display: block;
+    margin-left: -8px;
+    width: 100%;
+}
+
+.app-bank-icon{
+    display: block;
+    margin-left: 40px;
+    width: 50%;
 }
