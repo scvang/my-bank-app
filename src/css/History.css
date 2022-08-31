@@ -2,7 +2,7 @@ html {
   color: white;
 }
 
-.table-d{
+.table-history{
   width:120%;
   font-weight:bold;
   color: white;
@@ -25,10 +25,3 @@ html {
   font-weight:0;
   color: white;
 }
-
-.history-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-      Arial, sans-serif;
-      overflow-x: hidden;
-      overflow-y: hidden;
-  }

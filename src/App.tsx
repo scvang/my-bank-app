@@ -40,38 +40,34 @@ export default class App extends React.Component{
     render(){
         if(!this.state.isLoggedin){
             return(
-                <div className = 'app-body'>
-                    <div className = 'app-d-flex'>
-                        <div className = 'app-center'>
-                            <img src={bankIcon} className='app-bank-icon'/>
-                            <br></br><br></br>
-                            <img src={bankLogo} className='app-bank-logo'/>
-                            <br></br><br></br><br></br><br></br><br></br>
-                            {/* The user enters their email address */}
-                            <div style={{width:'100%'}}>
-                                <span title='Enter your E-mail address'>
-                                    <Form.Group controlId='login'>
-                                        <Form.Control className='' required onChange={this.setUsername} placeholder='E-mail'/>
-                                    </Form.Group>
-                                </span>
-                            </div>
+                <div className = 'app-div'>
+                    <div className = 'app-center'>
+                        <img src={bankIcon} className='app-bank-icon'/>
+                        <img src={bankLogo} className='app-bank-logo'/>
+                        {/* The user enters their email address */}
+                        <div style={{width:'100%'}}>
+                            <span title='Enter your username'>
+                                <Form.Group controlId='login'>
+                                    <Form.Control className='' required onChange={this.setUsername} placeholder='Username'/>
+                                </Form.Group>
+                            </span>
+                        </div>
 
-                            {/* The user enters a password field */}
-                            <div style={{width:'100%'}}>
-                                <span title='Enter your password'>
-                                    <Form.Group controlId='password'>
-                                        <Form.Control type='password' className='' required onChange={this.setUsername} placeholder='Password'/>
-                                    </Form.Group>
-                                </span>
-                            </div>
+                        {/* The user enters a password field */}
+                        <div style={{width:'100%'}}>
+                            <span title='Enter your password'>
+                                <Form.Group controlId='password'>
+                                    <Form.Control type='password' className='' required onChange={this.setUsername} placeholder='Password'/>
+                                </Form.Group>
+                            </span>
+                        </div>
 
-                            {/* Login button */}
-                            <br></br>
-                            <div className='app-center' style={{width: '40%'}}>
-                                <Button className='button' type="submit" onClick={this.setLoggedin}>
-                                    Sign-in
-                                </Button>
-                            </div>
+                        {/* Login button */}
+                        <br></br>
+                        <div className='app-center' style={{width: '40%'}}>
+                            <Button className='button' type="submit" onClick={this.setLoggedin}>
+                                Sign-in
+                            </Button>
                         </div>
                     </div>
                 </div>

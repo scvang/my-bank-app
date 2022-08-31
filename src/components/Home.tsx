@@ -88,24 +88,17 @@ export default class Home extends React.Component{
         }
         else
         return(
-        <div className = 'home'>
-            <div className = 'home-d-flex'>
+            <div className = 'home-div'>
                 <div className = 'home-center'>
-                        <p style = {{color:'white'}}>
-                            <h2>Account Summary:</h2>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <img src={bankCard} className='img-center'/>
-                            <p>Credit Card: {'(ending in ..9999)'}</p>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <p>Current Balance: $<>{this.state.balance}</></p>
-                            <p>Credit Available: $<>{this.state.credit}</></p>
-                         </p>
+                    <p style = {{color:'white'}}>
+                        <h2>Account Summary</h2>
+                        <br></br> <br></br> <br></br> <br></br>
+                        <img src={bankCard} className='img-center'/>
+                        <p>Credit Card: {'(ending in ..9999)'}</p>
+                        <br></br> <br></br> <br></br> <br></br>
+                        <p>Current Balance: $<>{this.state.balance}</></p>
+                        <p>Credit Available: $<>{this.state.credit}</></p>
+                    </p>
                 </div>
                 <table className='buttons' align='right'>
                     <tr>
@@ -125,7 +118,6 @@ export default class Home extends React.Component{
                     </tr>
                 </table>
             </div>
-        </div>
         );
     }
 }

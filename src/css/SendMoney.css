@@ -1,44 +1,27 @@
-.center{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-self:center;
-}
-
-.center-b{
-    margin: 0 auto;
-    margin-bottom: -500px;
-    align-self: center;
-    font-weight: bold;
-}
-
 .form-amount{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
+    margin:0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     text-align: center;
     margin-top:50px;
     margin-bottom:50px;
+
 }
 
 .form-to{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-    text-align: left;
-    margin-bottom:20px;
+    margin:0 auto;
+    margin-top:100px;
 }
 
 .form-message {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-    width: 159px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin:0 auto;
+    width: 177px;
     height: 80px;
     resize: none;
+    margin-top:40px;
+    margin-bottom:40px;
 }
 
-.send-money-button{
-    margin: 0 auto;
-    margin-top:20px;
-    display: flex;
-    justify-content: center;
+.send-heading{
+    margin-bottom:100px;
 }

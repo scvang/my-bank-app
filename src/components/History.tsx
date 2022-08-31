@@ -81,90 +81,88 @@ export default class History extends React.Component{
         }
         else
         return(
-            <div className = 'history-body'>
-                <div className = 'home-d-flex'>
-                    <div className = 'home-center'>
-                            <p className='table-d'>
-                                <h2 style={{marginLeft:40,marginTop:-200}}>Transaction History:</h2>
-                                <table>
-                                    <br></br>
-                                    <tr>
-                                        <td className='table-header'>Date</td>
-                                        <td className='table-header'>Amount</td>
-                                        <td className='table-header'>Description</td>
-                                    </tr>
-                                    <br></br>
-                                    <tr>
-                                        <td className='table-spacing'>10-11-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>8-08-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>7-28-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>7-09-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>7-11-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>6-16-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>6-11-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>5-04-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>3-19-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                    <tr>
-                                    <td className='table-spacing'>2-17-23</td>
-                                        <td className='table-spacing'>$20.00</td>
-                                        <td className='table-spacing'>Amazon Inc.</td>
-                                    </tr>
-                                </table>
-                             </p>
-                    </div>
-                    <table className='buttons' align='right'>
-                        <tr>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'home')}>Overview</Button>
-                            <br></br>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'history')}>Transaction History</Button>
-                            <br></br>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'send')}>Send Money</Button>
-                            <br></br>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'statements')}>Statements</Button>
-                            <br></br>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'payment')}>Payment</Button>
-                            <br></br>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'support')}>Support</Button>
-                            <br></br>
-                            <Button className ='button' size='lg' onClick={event => this.changePage(event,'logout')}>Logout</Button>
-                        </tr>
-                    </table>
+            <div className = 'home-div'>
+                <div className = 'home-center'>
+                        <p className='table-history'>
+                            <h2 style={{marginTop:-200}}>Transaction History</h2>
+                            <table>
+                                <br></br>
+                                <tr>
+                                    <td className='table-header'>Date</td>
+                                    <td className='table-header'>Amount</td>
+                                    <td className='table-header'>Description</td>
+                                </tr>
+                                <br></br>
+                                <tr>
+                                    <td className='table-spacing'>10-11-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>8-08-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>7-28-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>7-09-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>7-11-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>6-16-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>6-11-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>5-04-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>3-19-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                                <tr>
+                                <td className='table-spacing'>2-17-23</td>
+                                    <td className='table-spacing'>$20.00</td>
+                                    <td className='table-spacing'>Amazon Inc.</td>
+                                </tr>
+                            </table>
+                            </p>
                 </div>
+                <table className='buttons' align='right'>
+                    <tr>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'home')}>Overview</Button>
+                        <br></br>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'history')}>Transaction History</Button>
+                        <br></br>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'send')}>Send Money</Button>
+                        <br></br>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'statements')}>Statements</Button>
+                        <br></br>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'payment')}>Payment</Button>
+                        <br></br>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'support')}>Support</Button>
+                        <br></br>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'logout')}>Logout</Button>
+                    </tr>
+                </table>
             </div>
         );
     }
