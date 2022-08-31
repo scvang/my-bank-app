@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import Home from '../src/components/Home';
-import './css/App';
+import './css/App.css';
 import bankLogo from './assets/images/bank-logo.png';
 import bankIcon from './assets/images/bank-icon.png';
 
@@ -68,15 +68,10 @@ export default class App extends React.Component{
                             {/* Login button */}
                             <br></br>
                             <div className='app-center' style={{width: '40%'}}>
-                                <Row className="justify-content-md-center">
-                                    <Col className="col-add-btn-send">
-                                        <Button type="submit" onClick={this.setLoggedin}>
-                                            Sign-in
-                                        </Button>
-                                    </Col>
-                                </Row>
+                                <Button className='button' type="submit" onClick={this.setLoggedin}>
+                                    Sign-in
+                                </Button>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button } from 'react-bootstrap';
 import App from '../App';
-import '../css/History';
+import '../css/History.css';
 import Home from './Home';
 import Payment from './Payment';
 import SendMoney from './SendMoney';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import '../css/Home';
+import '../css/Home.css';
 import bankCard from '../assets/images/bank_card.png';
 import Globals from './Globals';
 import History from './History';

@@ -22,19 +22,18 @@ export default class SendMoney extends React.Component{
         return(
             <div className='center'>
                 <div className='center-b'>
-                        <Form.Group controlId='amount'>
-                            <p className='center'>Send Money:</p>
-                            <Form.Control className='form-amount' onChange={this.setAmount} placeholder='$0.00'></Form.Control>
-                        </Form.Group>
+                    <Form.Group controlId='amount'>
+                        <p className='center'>Send Money:</p>
+                        <Form.Control className='form-amount' onChange={this.setAmount} placeholder='$0.00'></Form.Control>
+                    </Form.Group>
 
                     <Form.Group controlId='recipient'>
                         <Form.Control className='form-to' onChange={this.setAmount} placeholder='To Recipient'></Form.Control>
                     </Form.Group>
                     <textarea className='form-message' placeholder='Message' onChange={this.setAmount}></textarea>
-                    <br></br>
-                    <Button className="send-money-button" type="submit" onClick={this.setAmount}>
-                        Send
-                    </Button>
+                    <div className='center'>
+                        <Button className='button' type="submit" onClick={this.setAmount}>Send</Button>
+                    </div>
                 </div>
             </div>
         )
