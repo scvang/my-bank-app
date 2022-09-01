@@ -8,6 +8,7 @@ import App from '../App';
 import Payment from './Payment';
 import Spending from './Spending';
 import Support from './Support';
+import { dialog } from 'electron';
 
 export default class SendMoney extends React.Component{
     state:{
@@ -52,6 +53,8 @@ export default class SendMoney extends React.Component{
     }
 
     submit = () => {
+        var amount = Number(this.state.amount).toFixed(2);
+        alert('You sent ' + this.state.recipient + ' an amount of $'+ amount);
         Globals.credit -= this.state.amount;
     }
     
