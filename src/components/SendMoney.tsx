@@ -6,19 +6,19 @@ import History from './History';
 import Home from './Home';
 import App from '../App';
 import Payment from './Payment';
-import Statements from './Statements';
+import Spending from './Spending';
 import Support from './Support';
 
 export default class SendMoney extends React.Component{
     state:{
-        amount: Number;
+        amount: number;
         recipient: String;
         message: String;
         historyScreen: boolean;
         homeScreen: boolean;
         paymentScreen: boolean;
         sendMoneyScreen: boolean;
-        statementScreen: boolean;
+        spendingScreen: boolean;
         supportScreen: boolean;
         appScreen: boolean;
     }
@@ -33,7 +33,7 @@ export default class SendMoney extends React.Component{
             homeScreen:false,
             paymentScreen:false,
             sendMoneyScreen:false,
-            statementScreen:false,
+            spendingScreen:false,
             supportScreen:false,
             appScreen:false,
         }
@@ -50,6 +50,10 @@ export default class SendMoney extends React.Component{
     setMessage = (event) =>{
         this.setState({message:event.target.value});
     }
+
+    submit = () => {
+        Globals.credit -= this.state.amount;
+    }
     
     changePage = (event,theScreen) =>{
         if(theScreen == 'history'){
@@ -64,8 +68,8 @@ export default class SendMoney extends React.Component{
         if(theScreen == 'send'){
             this.setState({sendMoneyScreen:true});
         }
-        if(theScreen == 'statements'){
-            this.setState({statementScreen:true});
+        if(theScreen == 'spending'){
+            this.setState({spendingScreen:true});
         }
         if(theScreen == 'support'){
             this.setState({supportScreen:true});
@@ -91,8 +95,8 @@ export default class SendMoney extends React.Component{
         if(this.state.sendMoneyScreen){
             return(<SendMoney/>)
         }
-        if(this.state.statementScreen){
-            return(<Statements/>)
+        if(this.state.spendingScreen){
+            return(<Spending/>)
         }
         if(this.state.supportScreen){
             return(<Support/>)
@@ -110,14 +114,14 @@ export default class SendMoney extends React.Component{
                         </span>
                         <span title='Enter recipient'>
                             <Form.Group controlId='recipient'>
-                                <Form.Control onChange={this.setAmount} placeholder='To Recipient'></Form.Control>
+                                <Form.Control onChange={this.setRecipient} placeholder='To Recipient'></Form.Control>
                             </Form.Group>
                         </span>
                             <Form.Group controlId='message'>
-                                <textarea className='form-message' placeholder='Message' onChange={this.setAmount}></textarea>
+                                <textarea className='form-message' placeholder='Message' onChange={this.setMessage}></textarea>
                             </Form.Group>
                         <div className='home-center'>
-                            <Button className='button' type="submit" onClick={this.setAmount}>Confirm</Button>
+                            <Button className='button' type="submit" onClick={this.submit}>Confirm</Button>
                         </div>
                     </div>
                 </div>
@@ -129,7 +133,7 @@ export default class SendMoney extends React.Component{
                         <br></br>
                         <Button className ='button' size='lg' onClick={event => this.changePage(event,'send')}>Send Money</Button>
                         <br></br>
-                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'statements')}>Statements</Button>
+                        <Button className ='button' size='lg' onClick={event => this.changePage(event,'spending')}>Spending</Button>
                         <br></br>
                         <Button className ='button' size='lg' onClick={event => this.changePage(event,'payment')}>Payment</Button>
                         <br></br>
