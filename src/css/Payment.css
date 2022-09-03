@@ -1,0 +1,15 @@
+.payment-center{
+    margin: 0 auto;
+    margin-top:100px;
+    margin-left:120px;
+    width:400px;
+}
+
+.payment-options{
+    margin-left:40px;
+}
+
+.payment-option-amount{
+    margin-left:-25px;
+    width: 140px;
+}

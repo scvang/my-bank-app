@@ -13,16 +13,17 @@ import Home from './Home';
 
 const tableData = [
     ["Category", "Amount"],
-    ["Food", 76],
-    ["Gas", 42],
+    ["Food", 77],
+    ["Gas", 43],
     ["Games", 20],
     ["Shopping", 55],
-    ["Others", 13],
+    ["Others", 18],
 ];
 
 const options = {
     backgroundColor:'transparent',
-    is3D:true,
+    pieHole:0.4,
+    is3D:false,
     legend: {
         textStyle: {
         color: '#ffffff'
@@ -53,6 +54,14 @@ export default class Spending extends React.Component{
             supportScreen:false,
             appScreen:false,
         }
+    }
+
+    getTotal = () => {
+        var total = 0;
+        for(let i = 1; i < tableData.length; ++i){
+            total += Number(tableData[i][1]);
+        }
+        return total;
     }
 
     changePage = (event,theScreen) =>{
@@ -106,7 +115,7 @@ export default class Spending extends React.Component{
             <div className = 'home-div'>
                 <div className = 'piechart'>
                     <h2>October Spending</h2>
-                    <p>Total: ${'206.00'}</p>
+                    <p>Total: ${this.getTotal().toFixed(2)}</p>
                     <Chart
                     chartType="PieChart"
                     data={tableData}
